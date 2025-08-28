@@ -9,6 +9,7 @@ export default function BookFinder() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
   const [initialLoading, setInitialLoading] = useState(true);
+  const [warning, setWarning] = useState("");
   const booksPerPage = 12;
 
   const defaultTitle = "Politics";
@@ -38,7 +39,11 @@ export default function BookFinder() {
 
   const searchBooks = (e) => {
     e.preventDefault();
-    if (!query.trim()) return;
+    if (!query.trim()){
+    setWarning("⚠️ Please enter a book title before searching.");
+    return;
+  }
+    setWarning("");
     setCurrentPage(1);
     fetchBooks(query);
   };
@@ -63,7 +68,7 @@ export default function BookFinder() {
       <button type="submit" className="search-btn">Search</button>
       {loading && <div className="loader"></div>}
     </form>
-
+    {warning && <p className="warning">{warning}</p>}
     {error && <p className="error">{error}</p>}
 
     {initialLoading ? (
