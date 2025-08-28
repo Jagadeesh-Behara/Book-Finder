@@ -1,12 +1,25 @@
-# React + Vite
+# 📚 Book Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application to search books using the **Open Library API**.  
+It allows users to search by book title, view results in a grid, and navigate with pagination.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔍 **Search Books** by title using the Open Library API.
+- 📖 **Display Books** in a clean grid layout (4 per row on desktop).
+- 🖼️ **Book Details**: Click on a book cover or title to view more details.
+- ⏳ **Loading Indicator**: Shows a "Books are loading, please wait a moment..." message while fetching.
+- ❌ **Error Handling**: Displays "No books found" or fetch errors when necessary.
+- 🔢 **Pagination**: Navigate through available results with page number buttons.
+- 📱 **Responsive Layout**: Works on mobile, tablet, and desktop.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React** (Frontend library)
+- **JavaScript (ES6+)**
+- **CSS** (custom styling with responsive grid)
+- **Open Library API** ([https://openlibrary.org/developers/api](https://openlibrary.org/developers/api))
